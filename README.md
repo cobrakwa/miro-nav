@@ -27,3 +27,6 @@ You can preview the project simply by opening the `index.html` file in your web 
 - Click on various navigation items to see dropdowns. Hover mouse out of each dropdown box to hide them again.
 - Click on "Sign Up Free" to view a pop-up modal for an email sign up.
 - Use the close icon at the top right of the screen to close the sign up modal.
+
+### Proposal for different design
+A hamburger menu can be implemented for the navbar, where the links expand vertically in a dropdown format instead of displaying horizontally. This layout is typically used for websites viewed on devices with narrower screen sizes, such as tablets or smartphones.
