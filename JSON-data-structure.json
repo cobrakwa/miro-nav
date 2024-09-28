@@ -1,0 +1,164 @@
+{
+  "navigation": {
+    "logo": {
+      "image": "miro-logo-with-text.png",
+      "link": "#home"
+    },
+    "menuItems": [
+      {
+        "id": "WhatisMiro",
+        "title": "What is Miro",
+        "type": "dropdown",
+        "icon": "fas fa-chevron-down",
+        "dropdownSections": [
+          {
+            "title": "Product",
+            "items": [
+              { "title": "Product Overview", "link": "/product-overview/" },
+              { "title": "Intelligent Canvas", "link": "/intelligent-canvas/" },
+              { "title": "Artificial Intelligence", "link": "/ai/" },
+              { "title": "Apps & Integrations", "link": "/integrations/" },
+              {
+                "title": "Developer Platform",
+                "link": "https://developers.miro.com/"
+              }
+            ]
+          },
+          {
+            "title": "What’s New",
+            "items": [
+              {
+                "title": "Quickly cast your vote with dots",
+                "link": "/",
+                "icon": "miro-lightbulb.png"
+              },
+              {
+                "title": "Turn brainstorms into briefs with Miro AI",
+                "link": "/",
+                "icon": "ai-stars.png"
+              },
+              {
+                "title": "Gather opinions using Polling widget",
+                "link": "/",
+                "icon": "ai-hand.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Solutions",
+        "title": "Solutions",
+        "type": "dropdown",
+        "icon": "fas fa-chevron-down",
+        "dropdownSections": [
+          {
+            "title": "By Team",
+            "items": [
+              { "title": "Product Management", "link": "/product-management/" },
+              { "title": "Engineering", "link": "/engineering/" },
+              { "title": "IT Teams", "link": "/it-teams/" },
+              { "title": "UX & Design", "link": "/ux-design/" },
+              { "title": "Marketing", "link": "/marketing/" }
+            ]
+          },
+          {
+            "title": "By Use Case",
+            "items": [
+              {
+                "title": "Technical Diagramming",
+                "link": "/technical-diagramming/"
+              },
+              { "title": "Whiteboarding", "link": "/whiteboarding/" },
+              { "title": "Wireframing", "link": "/wireframing/" },
+              { "title": "Agile Development", "link": "/agile-development/" },
+              { "title": "Process Mapping", "link": "/process-mapping/" },
+              {
+                "title": "Customer Journey Mapping",
+                "link": "/customer-journey-mapping/"
+              },
+              { "title": "Strategy & Planning", "link": "/strategy-planning/" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Resources",
+        "title": "Resources",
+        "type": "dropdown",
+        "icon": "fas fa-chevron-down",
+        "dropdownSections": [
+          {
+            "title": "Connect & Learn",
+            "items": [
+              { "title": "Customer Stories", "link": "/customer-stories/" },
+              { "title": "Community", "link": "/community/" },
+              { "title": "Academy", "link": "/academy/" },
+              { "title": "Help Center", "link": "/help-center/" },
+              { "title": "Blog", "link": "/blog/" },
+              { "title": "Developer Platform", "link": "/developer-platform/" }
+            ]
+          },
+          {
+            "title": "Explore",
+            "items": [
+              { "title": "Templates", "link": "/templates/" },
+              {
+                "title": "Customer Journey Mapping Template",
+                "link": "/customer-journey-template/"
+              },
+              {
+                "title": "Business Model Canvas Template",
+                "link": "/business-model-canvas-template/"
+              },
+              {
+                "title": "User Story Map Template",
+                "link": "/user-story-map-template/"
+              },
+              {
+                "title": "Product Roadmap Template",
+                "link": "/product-roadmap-template/"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Enterprise",
+        "title": "Enterprise",
+        "type": "dropdown",
+        "icon": "fas fa-chevron-down",
+        "dropdownSections": [
+          {
+            "title": "Enterprise-grade workspace",
+            "items": [
+              { "title": "Overview", "link": "/overview/" },
+              { "title": "Trust & Security", "link": "/trust-security/" },
+              { "title": "Enterprise Guard", "link": "/enterprise-guard/" },
+              { "title": "Accessibility", "link": "/accessibility/" },
+              { "title": "Customer Stories", "link": "/customer-stories/" }
+            ]
+          }
+        ]
+      }
+    ],
+    "rightNav": [
+      {
+        "title": "Contact Sales",
+        "link": "#",
+        "style": "hover:underline"
+      },
+      {
+        "title": "Login",
+        "link": "/login",
+        "style": "bg-white hover:bg-black hover:text-white text-black px-4 py-2 rounded-xl transition duration-150 ease-in-out",
+        "border": "border-4 border-sky-500"
+      },
+      {
+        "title": "Sign Up Free",
+        "style": "bg-blue-600 hover:bg-blue-800 text-white px-4 py-2 rounded-xl transition duration-150 ease-in-out",
+        "onClick": "openSignUpModal"
+      }
+    ]
+  }
+}

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miro Task</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <nav
+      class="topnav w-full bg-gray-50 h-16 border-black border-2 flex items-center justify-between"
+    >
+      <div class="left-nav">
+        <ul
+          class="flex justify-between w-full items-center pl-6 space-x-6"
+          id="navLinks"
+        >
+          <li>
+            <div class="logo">
+              <a href="#home">
+                <img
+                  src="miro-logo-with-text.png"
+                  alt="Miro Logo"
+                  class="h-10"
+                />
+              </a>
+            </div>
+          </li>
+
+          <li class="relative">
+            <a
+              onclick="toggleDropdown(this.id)"
+              class="flex items-center"
+              id="WhatisMiro"
+            >
+              <span class="hover:underline">What is Miro</span>
+              <i class="fas fa-chevron-down text-sm ml-1.5"></i>
+            </a>
+            <div
+              id="WhatisMiroDropdown"
+              class="hidden absolute rounded-3xl pt-8 pb-4 px-8 mt-5 bg-white shadow-md"
+              onmouseleave="hideDropdown(this.id)"
+            >
+              <div class="dropdown-section pr-2 pl-2">
+                <p class="category text-m font-ligh pb-3 text-sm font-light">
+                  Product
+                </p>
+                <ul class="w-64">
+                  <li
+                    class="flex pb-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a class="text-center">Product Overview</a>
+                  </li>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a class="flex text-center">Intelligent Canvas</a>
+                  </li>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a>Artificial Intelligence</a>
+                  </li>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a>Apps & Integrations</a>
+                  </li>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a>Developer Platform</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div
+                class="vertical-line w-px bg-gray-500 h-auto self-stretch mr-8"
+              ></div>
+
+              <div class="dropdown-section dropdown-section pr-2 pl-2 w-96">
+                <p class="category pb-2 text-sm font-light">What’s New</p>
+                <ul>
+                  <li
+                    class="flex pb-4 hover:underline hover:bg-gray-100 w-full rounded-lg items-center py-2"
+                  >
+                    <img
+                      src="./miro-lightbulb.png"
+                      alt="Lightbulb icon"
+                      class="h-8 w-8 border border-gray-200 rounded-md mr-3"
+                    />
+                    <a class="text-center">Quickly cast your vote with dots</a>
+                  </li>
+
+                  <li
+                    class="flex pb-4 hover:underline hover:bg-gray-100 w-full rounded-lg items-center py-2"
+                  >
+                    <img
+                      src="./ai-stars.png"
+                      alt="Lightbulb icon"
+                      class="h-8 w-8 border border-gray-200 rounded-md mr-3"
+                    />
+                    <a>Turn brainstorms into briefs with Miro AI</a>
+                  </li>
+                  <li
+                    class="flex pb-4 hover:underline hover:bg-gray-100 w-full rounded-lg items-center py-2"
+                  >
+                    <img
+                      src="./ai-hand.png"
+                      alt="Lightbulb icon"
+                      class="h-8 w-8 border border-gray-200 rounded-md mr-3"
+                    />
+                    <a>Gather opinions using Polling widget</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="relative">
+            <a
+              onclick="toggleDropdown(this.id)"
+              class="flex items-center"
+              id="Solutions"
+            >
+              <span class="hover:underline">Solutions</span>
+              <i class="fas fa-chevron-down text-sm ml-1.5"></i>
+            </a>
+            <div
+              id="SolutionsDropdown"
+              class="flex absolute rounded-3xl pt-8 pb-4 px-8 mt-5 bg-white shadow-md"
+              onmouseleave="hideDropdown(this.id)"
+            >
+              <div class="dropdown-section pr-2 pl-2">
+                <p class="category text-m font-ligh pb-3 text-sm font-light">
+                  By Team
+                </p>
+                <ul class="w-64">
+                  <li
+                    class="flex pb-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a class="text-center">Product Management</a>
+                  </li>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a class="flex text-center">Engineering</a>
+                  </li>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a>IT Teams</a>
+                  </li>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a>UX & Design</a>
+                  </li>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a>Marketing</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div
+                class="vertical-line w-px bg-gray-500 h-auto self-stretch mr-8"
+              ></div>
+
+              <div class="dropdown-section dropdown-section pr-2 pl-2 w-96">
+                <p class="category pb-2 text-sm font-light">By Use Case</p>
+                <ul>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a>Technical Diagramming</a>
+                  </li>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a>Whiteboarding</a>
+                  </li>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a>Wireframing</a>
+                  </li>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a>Agile Development</a>
+                  </li>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a>Process Mapping</a>
+                  </li>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a>Customer Journey Mapping</a>
+                  </li>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a>Stratgey & Planning</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="relative">
+            <a class="icon" onclick="toggleDropdown(this.id)" id="Resources">
+              <span class="hover:underline">Resources</span>
+              <i class="fas fa-chevron-down text-sm ml-1.5"></i>
+            </a>
+
+            <div
+              id="ResourcesDropdown"
+              class="flex absolute rounded-3xl pt-8 pb-4 px-8 mt-5 bg-white shadow-md"
+              onmouseleave="hideDropdown(this.id)"
+            >
+              <div class="dropdown-section pr-2 pl-2">
+                <p class="category text-m font-ligh pb-3 text-sm font-light">
+                  Connect & Learn
+                </p>
+                <ul class="w-64">
+                  <li
+                    class="flex pb-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a class="text-center">Customer Stories</a>
+                  </li>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a class="flex text-center">Community</a>
+                  </li>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a>Academy</a>
+                  </li>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a>Help Center</a>
+                  </li>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a>Blog</a>
+                  </li>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a>Developer Platform</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div
+                class="vertical-line w-px bg-gray-500 h-auto self-stretch mr-8"
+              ></div>
+
+              <div class="dropdown-section dropdown-section pr-2 pl-2 w-96">
+                <p class="category pb-2 text-sm font-light">Explore</p>
+                <ul>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a>Templates</a>
+                  </li>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a>Customer Journey Mapping Template</a>
+                  </li>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a>Business Model Canvas Template</a>
+                  </li>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a>User Story Map Template</a>
+                  </li>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a>Product Roadmap Template</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a class="icon" onclick="toggleDropdown(this.id)" id="Enterprise">
+              <span class="hover:underline">Enterprise</span>
+              <i class="fas fa-chevron-down text-sm ml-1.5"></i>
+            </a>
+            <div
+              id="EnterpriseDropdown"
+              class="flex absolute rounded-3xl pt-8 pb-4 px-8 mt-5 bg-white shadow-md"
+              onmouseleave="hideDropdown(this.id)"
+            >
+              <div class="dropdown-section dropdown-section pr-2 pl-2 w-96">
+                <p class="category pb-2 text-sm font-light">
+                  Enterprise-grade workspace
+                </p>
+                <ul>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a>Overview</a>
+                  </li>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a>Trust & Security</a>
+                  </li>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a>Enterprise Guard</a>
+                  </li>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a>Accessibility</a>
+                  </li>
+                  <li
+                    class="py-2 hover:underline hover:bg-gray-100 w-full rounded-lg items-center"
+                  >
+                    <a>Customer Stories</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="hover:underline"><a href="#contact">Customers</a></li>
+          <li class="hover:underline"><a href="#contact">Pricing</a></li>
+        </ul>
+      </div>
+
+      <div class="right-nav">
+        <ul class="flex space-x-2 pr-6 items-center">
+          <li class="pr-2 hover:underline"><a href="#">Contact Sales</a></li>
+
+          <li class="border-4 border-sky-500">
+            <a
+              href="/login"
+              style="border: 1px solid black"
+              class="bg-white hover:bg-black hover:text-white text-black px-4 py-2 rounded-xl transition duration-150 ease-in-out inline-block text-center"
+            >
+              Login
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="bg-blue-600 hover:bg-blue-800 text-white px-4 py-2 rounded-xl transition duration-150 ease-in-out inline-block text-center"
+              onClick="openSignUpModal()"
+            >
+              Sign Up Free
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div
+      id="signUpModal"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+    >
+      <!-- Modal content -->
+      <div class="modal-content bg-white rounded-lg p-5">
+        <span
+          class="close cursor-pointer absolute top-3 right-3 text-2xl"
+          onClick="closeSignUpModal()"
+          >&times;</span
+        >
+        <h1 class="text-lg font-bold mb-2">Sign up for free</h1>
+        <p>
+          We recommend using your <strong>work email</strong> — it keeps work
+          and life separate.
+        </p>
+        <form novalidate="" class="flex flex-col gap-4">
+          <label for="email" class="font-semibold">Work email</label>
+          <input
+            type="text"
+            placeholder="Enter email"
+            name="email"
+            required
+            class="form-input px-3 py-2 border rounded"
+          />
+          <button
+            type="submit"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Continue with Email
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
