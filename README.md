@@ -24,6 +24,6 @@ You can preview the project simply by opening the `index.html` file in your web 
 
 ### Interact with the Page
 
-- Click on various navigation items to see dropdowns. Hover mouse over each dropdown box to hide them again.
+- Click on various navigation items to see dropdowns. Hover mouse out of each dropdown box to hide them again.
 - Click on "Sign Up Free" to view a pop-up modal for an email sign up.
 - Use the close icon at the top right of the screen to close the sign up modal.
